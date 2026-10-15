@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John's Webpage - Hif3a Isoform Analysis</title>
+    <link rel="icon" type="image/png" href="../images/june-logo.png">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="meetjune.html">Meet June!</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="../projects.html">← Back to Projects</a>
+
+        <article>
+            <picture>
+                <source
+                    media="(max-width: 600px)"
+                    srcset="../images/project-mobile.png">
+                <img
+                    src="../images/project.png"
+                    alt="Featured image of Hif3a isoform analysis">
+            </picture>
+
+            <h1>Hif3a Isoform Analysis During Erythroid Differentiation</h1>
+
+            <p>
+                This project investigates the expression of different
+                Hif3a transcript isoforms during red blood cell
+                development in mice. Using publicly available
+                SMART-seq2 single-cell RNA sequencing data,
+                I analyzed isoform-specific regions to identify
+                which Hif3a transcripts are expressed across
+                different stages of erythroid differentiation,
+                from BFU-E to CFU-E.
+            </p>
+
+            <section>
+                <h2>Workflow & Methods</h2>
+
+                <ol>
+                    <li>
+                        <h3>Data Acquisition and Preparation</h3>
+                        <p>
+                            Obtained publicly available
+                            <b>SMART-seq2</b> single-cell RNA-seq
+                            data from <b>GEO</b> (GSE117228).
+                            Organized sequencing data across
+                            erythroid differentiation stages,
+                            including BFU-E, intermediate
+                            populations, and CFU-E.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h3>Read Alignment</h3>
+                        <p>
+                            Used <b>STAR</b> to align sequencing
+                            reads to the mouse reference genome
+                            (GRCm38/mm10) with
+                            <b>Ensembl</b> version 87 annotations.
+                            Examined alignment statistics and
+                            generated BAM files for downstream
+                            transcript analysis.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h3>Hif3a Isoform Annotation</h3>
+                        <p>
+                            Examined <b>Ensembl GTF</b> annotations
+                            to identify four Hif3a transcript
+                            isoforms and their genomic coordinates.
+                            Identified unique 5' and 3' untranslated
+                            regions (UTRs) that could help
+                            distinguish isoform expression.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h3>Isoform-Specific Read Quantification</h3>
+                        <p>
+                            Used <b>SAMtools</b> to filter
+                            alignments based on mapping quality
+                            and alignment flags. Converted
+                            aligned reads into genomic intervals
+                            using <b>BEDTools bamtobed</b>,
+                            then used <b>BEDTools intersect</b>
+                            to count reads overlapping
+                            isoform-specific UTR regions.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h3>Expression Analysis Across Cell Stages</h3>
+                        <p>
+                            Used <b>R</b> and <b>dplyr</b> to
+                            organize isoform-specific read counts
+                            by individual cell and erythroid
+                            differentiation stage. Compared
+                            expression patterns across BFU-E,
+                            intermediate stages, and CFU-E
+                            to identify dominant Hif3a isoforms.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h3>Alternative Splicing Analysis</h3>
+                        <p>
+                            Used <b>SCASL</b> and
+                            <b>STAR SJ.out.tab</b> splice junction
+                            files to investigate alternative
+                            splicing patterns. Compared observed
+                            splice junctions with annotated
+                            Hif3a introns to assess support
+                            for different transcript isoforms.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h3>Visualization and Interpretation</h3>
+                        <p>
+                            Used <b>R</b> to summarize and
+                            compare isoform expression across
+                            differentiation stages. Examined
+                            read coverage and splice junction
+                            evidence to evaluate which
+                            Hif3a transcripts were most
+                            consistently supported by the data.
+                        </p>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Results</h2>
+
+                <p>
+                    The analysis showed that Hif3a-002 was the
+                    dominant isoform across the examined
+                    erythroid differentiation stages.
+                    Hif3a-001 was also detected at lower
+                    levels, while Hif3a-004 showed little
+                    to no support in the isoform-specific
+                    UTR analysis.
+                </p>
+
+                <p>
+                    So far, I have explored Hif3a isoform expression across
+                    different stages of erythroid differentiation using
+                    single-cell RNA-seq data. I have also examined
+                    isoform-specific regions and alternative splicing patterns.
+                    The analysis is still ongoing, and no definitive
+                    conclusions have been reached.
+                </p>
+            </section>
+
+            <section>
+                <h2>Acknowledgements</h2>
+
+                <p>
+                    I would like to thank Dr. Hojun Li for
+                    giving me the opportunity to participate
+                    in this research and for his guidance
+                    throughout the project. I'm also grateful
+                    to the members of the Li Lab for their
+                    support, feedback, and willingness to
+                    help me learn throughout the analysis.
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 john bolibol</p>
+        <nav aria-label="Social Media">
+            <a href="https://x.com">X</a>
+            <a href="https://linkedin.com">LinkedIn</a>
+            <a href="https://github.com">GitHub</a>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John's Webpage - Contact Me</title>
+    <link rel="icon" type="image/png" href="images/june-logo.png">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="meetjune.html">Meet June!</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>contact me</h1>
+
+        <img src="images/mail.png" alt="Email icon">
+        <a href="mailto:jbolibol@ucsd.edu">
+            <span class="email">jbolibol@ucsd.edu</span>
+        </a>
+
+        <img src="images/pin.png" alt="Location icon">
+        <span class="location">San Diego, CA</span>
+
+        <form id="contact" form="#" method="post">
+            <fieldset>
+                <legend>Send me a message!</legend>
+                <label for="name">name:</label>
+
+                <input type="text" id="name" name="name">
+
+                <label for="email">email</label>
+
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">message</label>
+
+                <textarea id="message" name="message" rows="5" cols="40"></textarea>
+
+                <button type="submit">submit</button>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+    <p>&copy; 2026 john bolibol</p>
+    <nav aria-label="Social Media">
+        <a href="https://x.com">X</a>
+        <a href="https://linkedin.com">LinkedIn</a>
+        <a href="https://github.com">GitHub</a>
+    </nav>
+    </footer>
+</body>
+</html>

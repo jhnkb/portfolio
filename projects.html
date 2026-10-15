@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John's Webpage - Projects</title>
+    <link rel="icon" type="image/png" href="images/june-logo.png">
+
+    <style>
+    project-card {
+        display: block;
+        border: 1px solid gray;
+        padding: 20px;
+        margin: 15px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="meetjune.html">Meet June!</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>projects</h1>
+
+        <noscript>
+            <p>
+                JavaScript is disabled. Interactive project filtering
+                will require JavaScript, but all projects are available
+                to browse below.
+            </p>
+        </noscript>
+
+        <p class="project-filters">
+            <button type="button">Bioinformatics</button>
+            <button type="button">Personal</button>
+            <button type="button">All</button>
+        </p>
+
+
+        <section aria-label="Project Gallery">
+
+            <project-card>
+                <article class="bioinformatics">
+                    <img src="images/hif3a.png" alt="Hif3a project">
+                    <h2>Hif3a Isoform Analysis</h2>
+                    <p>
+                        Investigating Hif3a transcript isoforms during
+                        erythroid differentiation using single-cell RNA-seq.
+                    </p>
+                    <a href="projects/hif3a.html">View Project</a>
+                </article>
+            </project-card>
+
+            <project-card>
+                <article class="bioinformatics">
+                    <img src="images/socs1.png" alt="Socs1 analysis">
+                    <h2>Socs1 Expression Analysis</h2>
+                    <p>
+                        Analyzing gene expression and chromatin accessibility
+                        in Dex-treated and untreated cells using
+                        single-cell RNA-seq and ATAC-seq.
+                    </p>
+                    <a href="projects/socs1.html">View Project</a>
+                </article>
+            </project-card>
+
+            <project-card>
+                <article class="personal">
+                    <img src="images/watchtower.png" alt="WatchTower project">
+                    <h2>WatchTower</h2>                
+                    <p>
+                        A team-developed web application for monitoring
+                        website performance through an interactive dashboard.
+                    </p>
+                    <a href="projects/watchtower.html">View Project</a>
+                </article>
+            </project-card>
+        </section>
+    </main>
+
+    <footer>
+    <p>&copy; 2026 john bolibol</p>
+    <nav aria-label="Social Media">
+        <a href="https://x.com">X</a>
+        <a href="https://linkedin.com">LinkedIn</a>
+        <a href="https://github.com">GitHub</a>
+    </nav>
+    </footer>
+</body>
+</html>

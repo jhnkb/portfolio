@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John's Webpage - Socs1</title>
+    <link rel="icon" type="image/png" href="images/june-logo.png">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="meetjune.html">Meet June!</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="../projects.html">← Back to Projects</a>
+
+
+        <article>
+            <picture>
+                <source
+                media="(max-width: 600px)"
+                srcset="../images/project-mobile.png">
+                <img
+                src="../images/project.png"
+                alt="Featured image of the project">
+            </picture>
+
+            <h1>Determining Effects of Dex in Socs1 Gene in Mice</h1>
+
+            <p>This project focuses on understanding how dexamethasone (Dex) affects the expression of the Socs1 gene during red blood cell development in mice. 
+            Using single-cell RNA and ATAC sequencing data, I compared Socs1 expression between Dex-treated and untreated cells to investigate how the treatment influences gene expression during erythropoiesis.</p>
+            
+            <section>
+                <h2>Workflow & Methods</h2>
+
+                <ol>
+                    <li>
+                        <h3>Initial Socs1 Expression Analysis</h3>
+                        <p>
+                            Used <b>R</b>, <b>Scanpy</b>, <b>Seurat</b>,
+                            and <b>dplyr</b> to process single-cell RNA-seq
+                            data and examine Socs1 expression in BFU-E
+                            and Dex-treated cells. Performed Wilcoxon
+                            rank-sum tests and used <b>MAST</b> for
+                            statistical modeling, accounting for cell
+                            type and cellular detection rate.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h3>scRNA-seq Quality Control</h3>
+                        <p>
+                            Used <b>SoupX</b> to correct ambient RNA
+                            contamination in Dex and NoDex samples.
+                            Applied gene count and mitochondrial percentage
+                            filters using <b>Seurat</b>, then used
+                            <b>Scrublet</b> through <b>Python</b>
+                            and R's <b>reticulate</b> package to identify
+                            and remove predicted doublets.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h3>scRNA-seq Clustering and Visualization</h3>
+                        <p>
+                            Used <b>Seurat</b> to normalize and scale
+                            gene expression data, perform principal
+                            component analysis (PCA), generate UMAP
+                            visualizations, and identify cell clusters
+                            using Louvain clustering. Examined erythroid
+                            markers including Gypa, Kit, and Tfrc
+                            using <b>FeaturePlot</b> and <b>DotPlot</b>.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h3>scATAC-seq Data Preparation and Quality Control</h3>
+                        <p>
+                            Used <b>Cell Ranger ATAC</b> outputs,
+                            <b>Seurat</b>, and <b>Signac</b> to construct
+                            chromatin accessibility objects for Dex
+                            and NoDex samples. Incorporated
+                            <b>GENCODE</b> gene annotations and evaluated
+                            fragment counts, detected features, nucleosome
+                            signal, TSS enrichment, and fraction of
+                            reads in peaks (FRiP).
+                        </p>
+                    </li>
+
+                    <li>
+                        <h3>scATAC-seq Peak Analysis and Clustering</h3>
+                        <p>
+                            Used <b>Signac</b> and <b>GenomicRanges</b>
+                            to create a common peak set and quantify
+                            chromatin accessibility across both samples
+                            using <b>FeatureMatrix</b>. Applied TF-IDF
+                            normalization, singular value decomposition
+                            (SVD), and latent semantic indexing (LSI),
+                            followed by UMAP visualization and clustering
+                            in <b>Seurat</b>.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h3>RNA and ATAC Integration</h3>
+                        <p>
+                            Used <b>Signac</b> to calculate gene activity
+                            scores from chromatin accessibility data.
+                            Applied <b>Seurat</b>'s integration and label
+                            transfer methods to connect RNA expression
+                            profiles with ATAC-derived gene activity
+                            and investigate cell populations across
+                            both modalities.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h3>Downstream Analysis and Visualization</h3>
+                        <p>
+                            Used <b>Seurat</b>, <b>Signac</b>, and
+                            <b>ggplot2</b> to explore differences
+                            between Dex-treated and untreated cells,
+                            visualize cell populations, and investigate
+                            gene expression and chromatin accessibility
+                            patterns associated with erythroid development.
+                        </p>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>results</h2>
+                <p>
+                    Initial Socs1 analysis identified significant differences
+                    in gene expression between BFU-E and Dex-treated cells.
+                    I have also completed scRNA-seq quality control, clustering,
+                    and visualization, and have begun analyzing scATAC-seq data.
+                    This project is ongoing, with further analysis focused on
+                    understanding the effects of Dex on erythroid development.
+                </p>
+            </section>
+
+            <section>
+                <h2>acknowledgements</h2>
+
+                <p>
+                    I would like to thank Dr. Hojun Li for giving me
+                    the opportunity to be involved in this research
+                    and for his guidance throughout the project.
+                    I'm also grateful to Thac and Nick for their help,
+                    feedback, and support during my analyses, and to
+                    Parker for helping me obtain the data needed
+                    for this project.
+                </p>
+            </section>
+        </article>
+    </main>
+    
+    <footer>
+    <p>&copy; 2026 john bolibol</p>
+    <nav aria-label="Social Media">
+        <a href="https://x.com">X</a>
+        <a href="https://linkedin.com">LinkedIn</a>
+        <a href="https://github.com">GitHub</a>
+    </nav>
+    </footer>
+
+</body>
+</html>
