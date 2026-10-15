@@ -7,16 +7,6 @@
     <link rel="icon" type="image/png" href="images/june-logo.png">
 </head>
 
-<script>
-    class HelloWorld extends HTMLElement {
-        connectedCallback() {
-            console.log("Hello World!");
-        }
-    }
-
-    customElements.define("hello-world", HelloWorld);
-</script>
-
 <body>
     <main>
         <img src="images/june-logo.png" alt="Cartoon illustration of June, my dog">
@@ -48,5 +38,15 @@
         <a href="https://github.com">GitHub</a>
     </nav>
     </footer>
+
+    <script>
+        class HelloWorld extends HTMLElement {
+            connectedCallback() {
+                console.log("Hello World!");
+            }
+        }
+
+        customElements.define("hello-world", HelloWorld);
+    </script>
 </body>
 </html>
